@@ -4,12 +4,6 @@ from helpers.rag import perform_rag
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
-if "repos_fetched" not in st.session_state:
-    st.session_state.repos_fetched = False
-
-if "repos" not in st.session_state:
-    st.session_state.repos = []
-
 if "selected_model" not in st.session_state:
     st.session_state.selected_model = "Groq's Llama 3.1"
 
