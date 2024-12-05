@@ -1,11 +1,14 @@
 import streamlit as st
 from helpers.rag import perform_rag
+from helpers.analysis import retrieve_articles
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
 
 if "selected_model" not in st.session_state:
     st.session_state.selected_model = "Groq's Llama 3.1"
+    
+retrieve_articles()
 
 # Function to select AI model
 def select_model():
